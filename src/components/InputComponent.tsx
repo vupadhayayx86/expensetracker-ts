@@ -23,6 +23,13 @@ const InputComponent = ({handleUpdate}:InputProps) => {
   }
 
   useEffect(()=>{
+
+    if(amount<0){
+      alert("Amount Cannot Be Negative")
+     // amountRef.current.style.borderBlockColor="red";
+      return
+    }
+
     if(amount!==0 && text!=="" && ttype!=="")
     handleUpdate(amount,text,ttype)
   },[amount,text])
@@ -57,5 +64,4 @@ const InputComponent = ({handleUpdate}:InputProps) => {
     </div>
   )
 }
-
 export default InputComponent

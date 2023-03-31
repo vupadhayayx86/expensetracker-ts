@@ -3,6 +3,7 @@ import BalanceComponent from './components/BalanceComponent'
 import HistoryComponent from './components/HistoryComponent'
 import InputComponent from './components/InputComponent'
 import {BalanceProps, TransactionProps } from './models/TransactionModels'
+import "./App.css"
 
 const App = () => {
   let tid=1;
@@ -26,7 +27,7 @@ const App = () => {
   }
 
   return (
-    <div className='container bg-light w-25 my-1 p-4'>
+    <div className='container container-sm bg-light my-3 p-4'>
     <h3>Expense Tracker!</h3>
     <BalanceComponent balance={bank.balance} transaction={bank.transaction}/>
     <HistoryComponent balance={bank.balance} transaction={bank.transaction} />
